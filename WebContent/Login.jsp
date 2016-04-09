@@ -23,7 +23,7 @@ color: #fdfdfd;
 
 </style>
 </head>
-<body>
+<body> 
 <br>
 <div style="text-align: center;"><span style="font-family: Draft Beer;">&nbsp;
 </span><span style="color: white; font-family: Draft Beer;"></span><span
