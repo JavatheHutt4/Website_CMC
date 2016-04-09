@@ -58,7 +58,7 @@ style="color: rgb(51, 51, 51);">Username:</span><br>
 name="user"><br>
 </td>
 </tr>
-<tr> 
+<tr>  
 <td style="vertical-align: top;"><span
 style="color: rgb(2, 2, 2);">Password:</span><br>
 </td>
