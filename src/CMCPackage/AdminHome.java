@@ -1,4 +1,4 @@
-package CMCPackage;
+package CMCPackage; 
 
 /**
  * AdminHome class used to control the Admin class
