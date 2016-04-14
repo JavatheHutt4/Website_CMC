@@ -25,7 +25,7 @@ color: #fdfdfd;
 <form method="post" action="Logout_action.jsp" name="logout">
 <p id="panel" style="text-align: center;"><img
 style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="CMCLogo.png" align="left"><font size="+3">USER
+alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">USER
 INTERFACE <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <div id="panel">

@@ -116,7 +116,8 @@ public class AdminUI {
 	 * @param password
 	 */
 	public void logon(String user, String pass) {
-		adminHome.setMember(log.logon(user, pass));
+		int i = log.logon(user, pass);
+		adminHome.setMember(log.getMember());
 	}
 
 	/**

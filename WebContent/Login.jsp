@@ -30,7 +30,7 @@ color: #fdfdfd;
 style="font-family: Draft Beer;">&nbsp;</span><img
 style="width: 83px; height: 83px; font-family: Draft Beer;"
 alt="CMCLogo"
-src="file:///Users/tomrichmond/Desktop/CMC%20Graphics/CMCLogo.png"><span
+src="img/CMCLogo.png"><span
 style="font-family: Draft Beer;">&nbsp;
 </span><big style="font-family: Draft Beer;"><font size="+3"><big><big>Choose
 My College<span style="font-family: Arial;">™</span></big></big></font></big><span
@@ -43,6 +43,19 @@ System! <br>
 Please enter your username
 and
 password:<br>
+</p>
+<p style ="text-align: center;">
+<% String errorParam = request.getParameter("Error");
+if (errorParam != null){
+	int error = Integer.parseInt(errorParam);
+	if (error == -1){
+		out.println("Logoff Successful.");
+	}
+	else if (error == -2){
+		out.println("YOU CANNOT ACCESS THAT PAGE WITHOUT PROPER PERMISSIONS.<br>");
+	}
+}
+%>
 </p>
 <div id="panel">
 <form method="post" action="Login_action.jsp" name="Logon">

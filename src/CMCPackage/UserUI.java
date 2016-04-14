@@ -188,7 +188,8 @@ public class UserUI {
 	 * @param password
 	 */
 	public void logon(String user, String pass) {
-		userHome.setMember(log.logon(user, pass));
+		int i = log.logon(user, pass);
+		userHome.setMember(log.getMember());
 	}
 
 	/**

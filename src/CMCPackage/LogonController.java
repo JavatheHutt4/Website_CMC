@@ -64,11 +64,13 @@ public class LogonController {
 					return 1;
 				else
 					return 0;
-			} else {
+			} 
+			else {
 				//System.out.println("Logon Unsuccessful. Please check your username and password!");
 				return -1;
 			}
-		} else {
+		} 
+		else {
 			System.out.println("Logon Unsuccessful. Please check your username and password!");
 			return -2;
 		}
