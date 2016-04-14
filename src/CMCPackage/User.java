@@ -1,19 +1,21 @@
 package CMCPackage;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 
 /**
  * Class to represent a user in the CMC system
+ * 
  * @author tdrichmond
  * @version 3/14/2016
  */
-public class User extends Member{
-	
-	//Access to the UserHome class
+public class User extends Member {
+
+	// Access to the UserHome class
 	private UserHome uh;
-	
+
 	/**
 	 * Constructor method for User
+	 * 
 	 * @param firstName
 	 * @param lastName
 	 * @param userName
@@ -25,33 +27,37 @@ public class User extends Member{
 		super(firstName, lastName, userName, password, 'u', status);
 		uh = new UserHome();
 	}
-	
+
 	/**
 	 * Method to update the User's password, first and last name
+	 * 
 	 * @param firstname
 	 * @param lastname
 	 * @param password
 	 */
-	public void updateInformation(String first, String last, String password){
+	public void updateInformation(String first, String last, String password) {
 		this.setFirstName(first);
 		this.setLastName(last);
 		this.setPassword(password);
 	}
-	
+
 	/**
 	 * View the list of saved schools
+	 * 
 	 * @return the list of saved schools
 	 */
-	public ArrayList<String> getSavedSchools(){
+	public ArrayList<String> getSavedSchools() {
 		return uh.getSavedSchools(this.getUserName());
 	}
-	
+
 	/**
 	 * View the details of a saved school
-	 * @param the saved school
+	 * 
+	 * @param the
+	 *            saved school
 	 * @return the specified saved school
 	 */
-	public String viewSavedSchool(School school){
+	public String viewSavedSchool(School school) {
 		return school.toString();
 	}
 }
