@@ -45,7 +45,7 @@ and
 password:<br>
 </p>
 <div id="panel">
-<form method="post" action="login.action" name="Logon">
+<form method="post" action="Login_action.jsp" name="Logon">
 <table
 style="width: 333px; height: 66px; background-color: white; margin-left: auto; margin-right: auto;"
 border="1" cellpadding="2" cellspacing="2">
