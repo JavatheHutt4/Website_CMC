@@ -1,12 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<%@page language="java" import="CMCPackage.*,java.util.*"%>
+<%  
+    LogonController lc = new LogonController();
+    int loginStatus = lc.logon(request.getParameter("username"), request.getParameter("password"));
+    if (loginStatus<0){
+        response.sendRedirect("Login.jsp?Error="+loginStatus);
+    }
+    else{
+        session.setAttribute("lc", lc);
+        if (loginStatus == 1)
+        	response.sendRedirect("UserMenu.jsp");
+        else if (loginStatus == 2)
+        	response.sendRedirect("AdminMenu.jsp");
+    }
+%>

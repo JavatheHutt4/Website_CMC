@@ -5,7 +5,7 @@
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title>Logon</title>
+<title>Login</title>
 <style type="text/css">
 #panel {
 border-radius: 10px;
