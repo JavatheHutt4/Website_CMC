@@ -43,7 +43,7 @@ style="color: black;">First
 Name:</span><br>
 </td>
 <td style="vertical-align: top; color: black; height: 50px;"><input
-name="firstName"><br>
+name="firstName" value="<%=user.getFirstName()%>"><br>
 </td>
 </tr>
 <tr>
@@ -52,26 +52,28 @@ style="color: black;">Last
 Name:</span><br>
 </td>
 <td style="vertical-align: top; color: black; height: 50px;"><input
-name="lastName"><br>
+name="lastName" value="<%=user.getLastName()%>"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><span style="color: black;">Username:</span><br>
 </td>
-<td style="vertical-align: top; color: black;"><%=user.getUserName()%></td>
+<td style="vertical-align: top; color: black;"><input
+name="userName" value="<%=user.getUserName()%>" readonly></td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><span style="color: black;">Password:</span><br>
 </td>
 <td style="vertical-align: top; color: black;"><input
-name="password"><br>
+name="password" value="<%=user.getPassword()%>"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><span style="color: black;">Type:</span><br>
 </td>
 <td style="vertical-align: top; color: black;"><span
-style="color: black;">u</span><br>
+style="color: black;"><input
+name="type" value="u" readonly></span><br>
 </td>
 </tr>
 </tbody>
