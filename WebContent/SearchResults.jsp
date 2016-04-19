@@ -1,3 +1,4 @@
+<%@include file="Verify.jsp"%>
 <%@page language="java" import="CMCPackage.*,java.util.*"%>
 <html>
 <head>
@@ -71,7 +72,7 @@ String[][] results = sc.search(schoolName,state,location,control,numberOfStudent
 		perFinancialLow,perFinancialHigh,numberOfAppsLow,numberOfAppsHigh,perAdmittedLow,perAdmittedHigh,
 		perEnrolledLow,perEnrolledHigh,acadScaleLow,acadScaleHigh,socialScaleLow,socialScaleHigh,qOLScaleLow,qOLScaleHigh,
 		emphasis1,emphasis2,emphasis3,emphasis4,emphasis5);
-System.out.print(results.length);
+System.out.println(results.length);
 
 if(results==null)
 	response.sendRedirect("SearchSchools.jsp?Error=1");
