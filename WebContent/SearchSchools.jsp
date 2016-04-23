@@ -1,3 +1,4 @@
+<%@include file="Verify.jsp"%>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1"
@@ -27,8 +28,16 @@ style="width: 64px; height: 64px; font-family: Draft Beer;"
 alt="CMCLogo" src="CMCLogo.png" align="left"><font size="+3">SEARCH FOR SCHOOLS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <div id="panel">
+<% String errorParam = request.getParameter("Error");
+if (errorParam != null){
+	int error = Integer.parseInt(errorParam);
+	if (error == 1){
+		out.println("Search yielded no matching schools. Check to make sure that your parameters are valid.");
+	}
+}
+%>
 <form 
-method="post" action="SearchSchools_action.jsp"
+method="post" action="SearchResults.jsp"
 name="SearchForSchools"> 
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
@@ -51,51 +60,51 @@ cellspacing="2">
 </tr>
 <tr>
 <td>by NUMBER OF STUDENTS</td>
-<td>between <input name="NumberOfStudentsLow" type="text"> and <input name="NumberOfStudentsHigh" type="text"></td>
+<td>between <input name="NumberOfStudentsLow" type="text" value="-1"> and <input name="NumberOfStudentsHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by % FEMALE</td>
-<td>between <input name="PerFemaleLow" type="text"> and <input name="PerFemaleHigh" type="text"></td>
+<td>between <input name="PerFemaleLow" type="text" value="-1"> and <input name="PerFemaleHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by SAT VERBAL</td>
-<td>between <input name="SATVerbalLow" type="text"> and <input name="SATVerbalHigh" type="text"></td>
+<td>between <input name="SATVerbalLow" type="text" value="-1"> and <input name="SATVerbalHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by SAT MATH</td>
-<td>between <input name="SATMathLow" type="text"> and <input name="SATMathHigh" type="text"></td>
+<td>between <input name="SATMathLow" type="text" value="-1"> and <input name="SATMathHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by EXPENSES</td>
-<td>between <input name="ExpensesLow" type="text"> and <input name="ExpensesHigh" type="text"></td>
+<td>between <input name="ExpensesLow" type="text" value="-1"> and <input name="ExpensesHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by % FINANCIAL AID</td>
-<td>between <input name="PerFinancialLow" type="text"> and <input name="PerFinancialHigh" type="text"></td>
+<td>between <input name="PerFinancialLow" type="text" value="-1"> and <input name="PerFinancialHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by NUMBER OF APPLICANTS</td>
-<td>between <input name="NumberOfAppsLow" type="text"> and <input name="NumberOfAppsHigh" type="text"></td>
+<td>between <input name="NumberOfAppsLow" type="text" value="-1"> and <input name="NumberOfAppsHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by % ADMITTED</td>
-<td>between <input name="PerAdmittedLow" type="text"> and <input name="PerAdmittedHigh" type="text"></td>
+<td>between <input name="PerAdmittedLow" type="text" value="-1"> and <input name="PerAdmittedHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by % ENROLLED</td>
-<td>between <input name="PerEnrolledLow" type="text"> and <input name="PerEnrolledHigh" type="text"></td>
+<td>between <input name="PerEnrolledLow" type="text" value="-1"> and <input name="PerEnrolledHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by ACADEMICS SCALE(1-5)</td>
-<td>between <input name="AcadScaleLow" type="text"> and <input name="AcadScaleHigh" type="text"></td>
+<td>between <input name="AcadScaleLow" type="text" value="-1"> and <input name="AcadScaleHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by SOCIAL SCALE(1-5)</td>
-<td>between <input name="SocialScaleLow" type="text"> and <input name="SocialScaleHigh" type="text"></td>
+<td>between <input name="SocialScaleLow" type="text" value="-1"> and <input name="SocialScaleHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by QUALITY OF LIFE SCALE(1-5)</td>
-<td>between <input name="QOLScaleLow" type="text"> and <input name="QOLScaleHigh" type="text"></td>
+<td>between <input name="QOLScaleLow" type="text" value="-1"> and <input name="QOLScaleHigh" type="text" value="-1"></td>
 </tr>
 <tr>
 <td>by EMPHASIS</td>
