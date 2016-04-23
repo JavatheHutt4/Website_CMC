@@ -269,7 +269,6 @@ public class DatabaseController {
 	public String[][] getUsers() {
 		usersFromLibrary = databaseLibrary.user_getUsers();
 		return usersFromLibrary;
-
 	}
 
 	/**

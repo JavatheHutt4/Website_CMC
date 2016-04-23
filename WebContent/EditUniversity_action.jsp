@@ -1,4 +1,5 @@
 <%@include file="Verify.jsp"%>
+<<<<<<< HEAD
 <%@page language="java" import="CMCPackage.*,java.util.*"%>
 <%
 	AdminHome ah = new AdminHome();
@@ -15,3 +16,6 @@
 	ah.addUniversityEmphasis(school, request.getParameter("emphasis4"));
 	ah.addUniversityEmphasis(school, request.getParameter("emphasis5"));
 %>
+=======
+<%@page language="java" import="CMCPackage.*,java.util.*"%>
+>>>>>>> branch 'master' of https://github.com/JavatheHutt4/Website_CMC.git

@@ -142,6 +142,16 @@ public class AdminHome {
 	public Admin getMember() {
 		return admin;
 	}
+	
+	/**
+	 * getUsers fetches all of the users stored in the database and provides
+	 * them to the user
+	 * 
+	 * @return all of the users in the library
+	 */
+	public String[][] getUsers() {
+		return db.getUsers();
+	}
 
 	/**
 	 * Runs the findByName method on db
