@@ -145,6 +145,16 @@ public class AdminUI {
 	public AdminHome getAdminHome() {
 		return adminHome;
 	}
+	
+	/**
+	 * getUsers fetches all of the users stored in the database and provides
+	 * them to the user
+	 * 
+	 * @return all of the users in the library
+	 */
+	public String[][] getUsers() {
+		return adminHome.getUsers();
+	}
 
 	/**
 	 * view the member information of admin
