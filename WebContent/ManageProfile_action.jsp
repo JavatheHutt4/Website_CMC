@@ -1,4 +1,4 @@
-<%@include file="Verify.jsp"%>
+<%@include file="VerifyUser.jsp"%>
 <%@page language="java" import="CMCPackage.*,java.util.*"%>
 <%
 	User user = (User) lc.getMember();

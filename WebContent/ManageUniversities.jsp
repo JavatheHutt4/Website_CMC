@@ -1,4 +1,4 @@
-<%@include file="Verify.jsp"%>
+<%@include file="VerifyUser.jsp"%>>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1"

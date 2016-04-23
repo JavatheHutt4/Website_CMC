@@ -1,11 +1,11 @@
-<%@include file="Verify.jsp"%>
+<%@include file="VerifyAdmin.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Manage Users</title>
+<title>Manage Users </title>
 <style type="text/css">
 #panel {
 border-radius: 10px;
@@ -45,7 +45,7 @@ cellspacing="2">
 <tr>
 <td style="vertical-align: top;text-align:center;" colspan="8">
 <form method="post" action="AddUser.jsp" name="addUser"><input name="AddUser"
-value="AddUser" type="submit"> </form>
+value="Add User" type="submit"> </form>
 </td>
 </tr>
 <tr>
