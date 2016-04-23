@@ -32,11 +32,9 @@ Universities <input name="logout" value="Logout" type="submit"></font> </p>
 cellspacing="2">
 <tbody>
 <tr align="center">
-
 <td colspan="17" rowspan="1" style="vertical-align: top;"><a
 href="AddUniversity.jsp">Add a new University</a><br>
 </td>
-
 </tr>
 <tr>
 <td style="vertical-align: top; color: black; text-align: center;">School<br>
