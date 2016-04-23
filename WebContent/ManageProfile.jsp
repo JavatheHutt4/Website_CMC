@@ -3,7 +3,7 @@
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title>Manage Profile</title>
+<title>Manage My Profile</title>
 <style type="text/css">
 #panel {
 border-radius: 10px;
