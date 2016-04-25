@@ -225,7 +225,7 @@ public class DatabaseController {
 		}
 		for (int i = 0; i < usersFromLibrary.length; i++) {
 			if (usersFromLibrary[i][2].equals(username))
-				return -1;
+				return -2;
 			else
 				continue;
 		}

@@ -85,8 +85,8 @@ public class AdminUI {
 	 * @param char
 	 *            representing the type of member
 	 */
-	public void addMember(String f, String l, String u, String p, char t, char s) {
-		adminHome.addNewMember(u, f, l, p, t);
+	public int addMember(String f, String l, String u, String p, char t, char s) {
+		return adminHome.addNewMember(u, f, l, p, t);
 	}
 
 	/**

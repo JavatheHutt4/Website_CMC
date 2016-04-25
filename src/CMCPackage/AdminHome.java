@@ -46,11 +46,8 @@ public class AdminHome {
 	 * @param password
 	 * @param type
 	 */
-	public void addNewMember(String u, String f, String l, String p, char t) {
-		if (t != 'a' && t != 'u') {
-			System.out.print("Invalid new member information");
-		}
-		db.addNewMember(f, l, u, p, t);
+	public int addNewMember(String u, String f, String l, String p, char t) {
+		return db.addNewMember(f, l, u, p, t);
 	}
 
 	/**
