@@ -1,4 +1,4 @@
-<%@include file="VerifyUser.jsp"%>
+<%-- <%@include file="VerifyUser.jsp"%> --%>
 <%@page language="java" import="CMCPackage.*,java.util.*"%>
 <html>
 <head>
@@ -17,7 +17,7 @@ font-size: xx-large;
 }
 body {
 background-color: #020202;
-color: #fdfdfd;
+color: #0e0d0d;
 }
 
 </style>
@@ -26,7 +26,7 @@ color: #fdfdfd;
 <form method="post" action="Logout_action.jsp" name="logout">
 <p id="panel" style="text-align: center;"><img
 style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="CMCLogo.png" align="left"><font size="+3">SEARCH RESULTS <input name="logout" value="Logout" type="submit"></font> </p>
+alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">SEARCH RESULTS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <div id="panel">
 <% 
@@ -72,7 +72,6 @@ String[][] results = sc.search(schoolName,state,location,control,numberOfStudent
 		perFinancialLow,perFinancialHigh,numberOfAppsLow,numberOfAppsHigh,perAdmittedLow,perAdmittedHigh,
 		perEnrolledLow,perEnrolledHigh,acadScaleLow,acadScaleHigh,socialScaleLow,socialScaleHigh,qOLScaleLow,qOLScaleHigh,
 		emphasis1,emphasis2,emphasis3,emphasis4,emphasis5);
-System.out.println(results.length);
 
 if(results==null)
 	response.sendRedirect("SearchSchools.jsp?Error=1");
@@ -84,7 +83,8 @@ for(int i = 0; i < results.length; i++){
 
 for(int i = 0; i < results.length; i++){
 %>
-<table style="text-align: left; width: 100%;" border="1" >
+<table style="text-align: center; width: 100%;" border="1" cellpadding="2"
+cellspacing="2" >
 <tbody>
 <tr>
 <td>

@@ -62,7 +62,6 @@ public class SchoolHome {
 		int j = 0;
 		for (int i = 0; i < all.length; i++) {
 			if (all[i][0].equals(school)) {
-				System.out.println(j);
 				emphases[j] = all[i][1];
 				j++;
 			}

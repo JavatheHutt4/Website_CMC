@@ -1,4 +1,4 @@
-<%@include file="VerifyUser.jsp"%>
+<%-- <%@include file="VerifyUser.jsp"%> --%>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1"
@@ -16,7 +16,7 @@ font-size: xx-large;
 }
 body {
 background-color: #020202;
-color: #fdfdfd;
+color: #0e0d0d;
 }
 
 </style>
@@ -25,7 +25,7 @@ color: #fdfdfd;
 <form method="post" action="Logout_action.jsp" name="logout">
 <p id="panel" style="text-align: center;"><img
 style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="CMCLogo.png" align="left"><font size="+3">SEARCH FOR SCHOOLS <input name="logout" value="Logout" type="submit"></font> </p>
+alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">SEARCH FOR SCHOOLS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <div id="panel">
 <% String errorParam = request.getParameter("Error");
