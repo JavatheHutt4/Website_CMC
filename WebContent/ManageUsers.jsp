@@ -38,6 +38,19 @@ style="width: 64px; height: 64px; font-family: Draft Beer;"
 alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">MANAGE USERS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 
+<p style ="text-align:center;">
+<% 
+String msg = request.getParameter("msg");
+if (msg!=null){
+	int msgNum = Integer.parseInt(msg);
+	if (msgNum == 1)
+		out.println("Member information has been updated!");
+	else if (msgNum == 2)
+		out.println("Member has been deactivated");
+}
+%>
+</p>
+
 <div id="panel2">
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
@@ -66,23 +79,21 @@ value="Add User" type="submit"> </form>
 <td style="vertical-align: top;">
 </td>
 </tr>
-
 <%
 AdminUI au = new AdminUI();
 String[][] users = au.getUsers();
 for (int i = 0; i < users.length; i ++){
-	out.println("<tr><td><form action=\"EditUser.jsp?User="+users[i][0]+"\" name=\"edit\"><input name=\"Edit\""
-			+"value=\"Edit\" type=\"submit\"><br>"
+	out.println("<tr><td><form action=\"EditUser.jsp\" name=\"edit\"><input name=\"Edit\""
+			+"value=\"Edit\" type=\"submit\"><input name = \"User\" value =\""+users[i][2]+"\" type= \"hidden\"><br>"
 			+"</form></td>");
 	for (int j = 0; j < users[i].length; j++){
 		out.println("<td>"+users[i][j]+"</td>");
 	}
-	out.println("<td><form action=\"DeactivateUser_action.jsp?User="+users[i][0]+"\" name=\"deactivate\"><input name=\"Deactivate\""
-			+"value=\"Deactivate\" type=\"submit\"><br>"
+	out.println("<td><form action=\"DeactivateUser_action.jsp\" name=\"deactivate\"><input name=\"Deactivate\""
+			+"value=\"Deactivate\" type=\"submit\"><input name = \"User\" value =\""+users[i][2]+"\" type= \"hidden\"><br>"
 			+"</form></td></tr>");
 }
 %>
-
 </div>
 </tbody>
 </table>

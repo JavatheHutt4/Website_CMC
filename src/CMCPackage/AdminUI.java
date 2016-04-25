@@ -164,5 +164,16 @@ public class AdminUI {
 	public String viewMemberInfo() {
 		return getLog().getMember().toString();
 	}
+	
+	/**
+	 * Runs the findByName method on db
+	 * 
+	 * @param the
+	 *            username of the user you are searching for
+	 * @return the user you searched for
+	 */
+	public Member findByName(String u) {
+		return adminHome.findByName(u);
+	}
 
 }
