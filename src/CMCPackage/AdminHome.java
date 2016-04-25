@@ -19,10 +19,16 @@ public class AdminHome {
 	public DatabaseController db;
 
 	/**
+	 * SchoolHome object
+	 */
+	public SchoolHome sh;
+	
+	/**
 	 * Constructor for AdminHome object which instantiates database
 	 */
 	public AdminHome() {
 		db = new DatabaseController();
+		sh = new SchoolHome();
 	}
 
 	/**
@@ -89,13 +95,33 @@ public class AdminHome {
 	 * @param QOLScale
 	 * @param emphasis
 	 */
-	public void addUniversity(String name, String state, String location, String control, int numStudents,
-			int perFemale, int satVerbal, int satMath, int expenses, int perFinancial, int numApplicants,
-			int perAdmitted, int perEnrolled, int acadScale, int socialScale, int QOLScale) {
+	public void addUniversity(String name, String state, String location, String control, int numStudents, double perFemale, double satVerbal, double satMath, 
+			double expenses, double perFinancial, int numApplicants, double perAdmitted, double perEnrolled, int acadScale, int socialScale, int QOLScale) {
 		db.addSchool(name, state, location, control, numStudents, perFemale, satVerbal, satMath, expenses, perFinancial,
 				numApplicants, perAdmitted, perEnrolled, acadScale, socialScale, QOLScale);
 	}
 
+	/**
+	 * Adds the emphasis to the school
+	 * @param name
+	 * @param emphasis
+	 */
+	public void addUniversityEmphasis(String school, String emphasis){
+		db.addUniversityEmphasis(school, emphasis);
+	}
+	
+	/**
+	 * Delete all emphases for a school
+	 * @param school
+	 */
+	public void deleteUniversityEmphases(String school){
+		School s = sh.findByName(school);
+		String[] emphases = s.getEmphasis();
+		for(int i=0;i<emphases.length;i++){
+			db.deleteUniversityEmphasis(school, emphases[i]);
+		}
+	}
+	
 	/**
 	 * edits university in database using DatabaseController object * @param
 	 * name
@@ -117,9 +143,8 @@ public class AdminHome {
 	 * @param QOLScale
 	 * @param emphasis
 	 */
-	public void editUniversity(String name, String state, String location, String control, int numStudents,
-			int perFemale, int satVerbal, int satMath, int expenses, int perFinancial, int numApplicants,
-			int perAdmitted, int perEnrolled, int acadScale, int socialScale, int QOLScale) {
+	public void editUniversity(String name, String state, String location, String control, int numStudents, double perFemale, double satVerbal, double satMath, 
+			double expenses, double perFinancial, int numApplicants, double perAdmitted, double perEnrolled, int acadScale, int socialScale, int QOLScale) {
 		db.editSchool(name, state, location, control, numStudents, perFemale, satVerbal, satMath, expenses,
 				perFinancial, numApplicants, perAdmitted, perEnrolled, acadScale, socialScale, QOLScale);
 	}

@@ -155,7 +155,7 @@ public class AdminUI {
 	public String[][] getUsers() {
 		return adminHome.getUsers();
 	}
-
+ 
 	/**
 	 * view the member information of admin
 	 * 
