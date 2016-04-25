@@ -32,12 +32,25 @@ color: #fdfdfd;
 </style>
 </head>
 <body>
-<form method="post" action="Logout_action.jsp" name="logout">
+<form  action="Logout_action.jsp" name="logout">
 <p id="panel" style="text-align: center;"><img
 style="width: 64px; height: 64px; font-family: Draft Beer;"
 alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">Add User <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
-
+<p style="text-align:center">
+<%
+String error = request.getParameter("Error");
+if (error !=null){
+	int errorNum = Integer.parseInt(error);
+	if (errorNum==-1){
+		out.println("MEMBER TYPE MUST BE EITHER: \n'a' for admin or 'u' for user");
+	}
+	else if (errorNum==-2){
+		out.println("Username is already taken. Please try another username");
+	}
+}
+%>
+</p>
 <div id="panel2">
 <form method="post" action="AddUser_action.jsp" name="adduser">
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
