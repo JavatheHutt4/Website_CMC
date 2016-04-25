@@ -104,7 +104,7 @@ cellspacing="2">
 <tr>
 <td style="vertical-align: top; color: black; text-align: center;"># of Applicants<br>
 </td>
-<td style="vertical-align: top; color: black;"><input name="numAplicants" value="<%=s.getNumApplicants()%>"><br>
+<td style="vertical-align: top; color: black;"><input name="numApplicants" value="<%=s.getNumApplicants()%>"><br>
 </td>
 </tr>
 <tr>

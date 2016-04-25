@@ -100,7 +100,7 @@ cellspacing="2">
 <tr>
 <td style="vertical-align: top; color: black; text-align: center;"># of Applicants<br>
 </td>
-<td style="vertical-align: top; color: black;"><input name="numAplicants"><br>
+<td style="vertical-align: top; color: black;"><input name="numApplicants"><br>
 </td>
 </tr>
 <tr>
