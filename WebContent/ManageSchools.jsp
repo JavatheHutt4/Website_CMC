@@ -38,7 +38,16 @@ color: #fdfdfd;
 style="width: 64px; height: 64px; font-family: Draft Beer;"
 alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">MANAGE SCHOOLS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
-
+<p style ="text-align:center;">
+<% 
+String msg = request.getParameter("msg");
+if (msg!=null){
+	int msgNum = Integer.parseInt(msg);
+	if (msgNum == 1)
+		out.println("School has successfully been removed from your saved schools");
+}
+%>
+</p>
 <div id="panel2">
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
@@ -52,7 +61,7 @@ LogonController lc = (LogonController) session.getAttribute("lc");
 User user = (User) lc.getMember();
 ArrayList<String> schools = user.getSavedSchools();
 for (int i = 0; i < schools.size(); i ++){
-	out.println("<tr><td><form action=\"RemoveSave_action.jsp\" name=\"remove\"><input name=\"Remove\""
+	out.println("<tr><td><form action=\"RemoveSchool_action.jsp\" name=\"remove\"><input name=\"Remove\""
 			+"value=\"Remove\" type=\"submit\"><input name = \"School\" value =\""+schools.get(i)+"\" type= \"hidden\"><br>"
 			+"</form></td>");
 	out.println("<td>"+schools.get(i)+"</td>");
@@ -61,9 +70,9 @@ for (int i = 0; i < schools.size(); i ++){
 			+"</form></td></tr>");
 }
 %>
-</div>
 </tbody>
 </table>
+</div>
 
 </body>
 </html>

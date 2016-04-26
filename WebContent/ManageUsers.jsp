@@ -94,9 +94,9 @@ for (int i = 0; i < users.length; i ++){
 			+"</form></td></tr>");
 }
 %>
-</div>
 </tbody>
 </table>
+</div>
 
 </body>
 </html>

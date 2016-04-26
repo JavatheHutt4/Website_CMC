@@ -25,7 +25,7 @@ public class User extends Member {
 	 */
 	public User(String firstName, String lastName, String userName, String password, char status) {
 		super(firstName, lastName, userName, password, 'u', status);
-		uh = new UserHome();
+		uh = new UserHome(this);
 	}
 
 	/**
@@ -70,5 +70,4 @@ public class User extends Member {
 	public void removeSavedSchool(String s) {
 		uh.removeSavedSchool(s);
 	}
-	
 }

@@ -81,6 +81,7 @@ public class UserHome {
 	 *            school name to be saved
 	 */
 	public int removeSavedSchool(String s) {
+		System.out.println("Test1");
 		return db.removeSchool(user.getUserName(), s);
 	}
 
