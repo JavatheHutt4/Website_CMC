@@ -104,7 +104,7 @@ for(int i = 0; i < results.length; i++){
     <input name="SchoolName" value="<%=schools.get(i).getName() %>" type="hidden">
     </form>
     
-</td>
+</td> 
 </tr>
 <% } %>
 </tbody>
