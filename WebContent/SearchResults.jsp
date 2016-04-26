@@ -91,15 +91,15 @@ for(int i = 0; i < results.length; i++){
 <form method="post" action="SearchViewSchool.jsp" name="SearchViewSchool">
     <input name="viewSchool"
 	value="View" type="submit">
-    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden">
+    <input name="SchoolName" value="<%=schools.get(i).getName() %>" type="hidden">
 	</form>
 </td>
 <td><%=schools.get(i).getName() %></td>
 <td>
-	<form method="post" action="SearchSave_action.jsp" name="SearchSave">
+	<form method="post" action="Save_action.jsp" name="SearchSave">
     <input name="saveSchool"
 	value="Save" type="submit">
-    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden">
+    <input name="SchoolName" value="<%=schools.get(i).getName() %>" type="hidden">
     </form>
     
 </td>
