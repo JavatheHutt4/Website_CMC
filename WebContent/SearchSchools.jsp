@@ -126,7 +126,6 @@ value="Search For Schools" type="submit"></form>
 <input name="resetsearchforschools"
 value="Reset Form" type="reset">
 
-
 </div>
 </body>
 </html>
