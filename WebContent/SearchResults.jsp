@@ -90,19 +90,18 @@ for(int i = 0; i < results.length; i++){
 <td>
 <form method="post" action="SearchViewSchool.jsp" name="SearchViewSchool">
     <input name="viewSchool"
-	value="View" type="submit"><br>
-    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden"><br>
+	value="View" type="submit">
+    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden">
 	</form>
-	<br>
 </td>
 <td><%=schools.get(i).getName() %></td>
 <td>
 	<form method="post" action="SearchSave_action.jsp" name="SearchSave">
     <input name="saveSchool"
-	value="Save" type="submit"><br>
-    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden"><br>
+	value="Save" type="submit">
+    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden">
     </form>
-    <br>
+    
 </td>
 </tr>
 <% } %>
