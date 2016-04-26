@@ -60,4 +60,15 @@ public class User extends Member {
 	public String viewSavedSchool(School school) {
 		return school.toString();
 	}
+	
+	/**
+	 * removes saved school
+	 * 
+	 * @param school
+	 *            to be removed
+	 */
+	public void removeSavedSchool(String s) {
+		uh.removeSavedSchool(s);
+	}
+	
 }

@@ -80,13 +80,8 @@ public class UserHome {
 	 * @param String
 	 *            school name to be saved
 	 */
-	public void removeSavedSchool(String s) {
-		int i = db.removeSchool(user.getUserName(), s);
-		if (i != -1) {
-			System.out.println("School was successfully removed");
-		} else {
-			System.out.println("School is not in saved school list");
-		}
+	public int removeSavedSchool(String s) {
+		return db.removeSchool(user.getUserName(), s);
 	}
 
 	/**

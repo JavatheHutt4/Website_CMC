@@ -1,5 +1,5 @@
 <%@include file="VerifyAdmin.jsp"%>
-<%@page language="java" import="CMCPackage.*,java.util.*"%>\
+<%@page language="java" import="CMCPackage.*,java.util.*"%>
 <% 
 AdminUI aui = new AdminUI();
 String first = request.getParameter("first");

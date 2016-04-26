@@ -17,6 +17,14 @@ background-color: silver;
 color: #0e0d0d;
 font-size: xx-large;
 }
+#panel2 {
+border-radius: 10px;
+padding: 10px;
+margin-right: 80px;
+margin-left: 80px;
+background-color: silver;
+color: #0e0d0d;
+}
 body {
 background-color: #020202;
 color: #fdfdfd;
@@ -30,6 +38,7 @@ style="width: 64px; height: 64px; font-family: Draft Beer;"
 alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">Add A New University<input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <br>
+<div id="panel2">
 <form style="height: 301px;" method="post"
 action="AddUniversity_action.jsp" name="AddUniversity">
 <table style="text-align: left; background-color: white; width: 600px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2"
@@ -149,5 +158,6 @@ type="reset"><br>
 <br>
 </div>
 </form>
+</div>
 </body>
 </html>
