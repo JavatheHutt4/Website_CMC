@@ -44,6 +44,20 @@ char status= member.getStatus();
 %>
 
 <body>
+<p style ="text-align:center;">
+<%
+String error = request.getParameter("Error");
+if (error != null){
+	int errorNum = Integer.parseInt(error);
+	if (errorNum == -1){
+		out.println("Invalid entry for type. Please enter either 'a' or 'u'");
+	}
+	else if (errorNum == -2){
+		out.println("Invalid entry for status. Please enter either 'Y' or 'N'");
+	}
+}
+%>
+</p>
 <form  action="Logout_action.jsp" name="logout">
 <p id="panel" style="text-align: center;"><img
 style="width: 64px; height: 64px; font-family: Draft Beer;"

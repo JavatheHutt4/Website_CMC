@@ -65,7 +65,7 @@ for (int i = 0; i < schools.size(); i ++){
 			+"value=\"Remove\" type=\"submit\"><input name = \"School\" value =\""+schools.get(i)+"\" type= \"hidden\"><br>"
 			+"</form></td>");
 	out.println("<td>"+schools.get(i)+"</td>");
-	out.println("<td><form action=\"ViewSchool_action.jsp\" name=\"view\"><input name=\"View\""
+	out.println("<td><form action=\"ViewSchool.jsp\" name=\"view\"><input name=\"View\""
 			+"value=\"View\" type=\"submit\"><input name = \"School\" value =\""+schools.get(i)+"\" type= \"hidden\"><br>"
 			+"</form></td></tr>");
 }
