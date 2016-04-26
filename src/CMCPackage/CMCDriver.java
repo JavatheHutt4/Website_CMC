@@ -33,19 +33,19 @@ public class CMCDriver {
 		userUI.manageMyProfile("John", "User", "user");
 		// tests search method for BARUCH college
 		System.out.println("\nSearching for college BARUCH in NEW YORK...");
-		String[][] searchResults = userUI.search("BARUCH", "NEW YORK", null, null, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-				-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, null, null, null, null, null);
+		String[][] searchResults = userUI.search("BARUCH", "NEW YORK", "", "", -1, -1, -1, -1, -1, -1, -1, -1, -1,
+				-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, "", "", "", "", "");
 		for (int i = 0; i < searchResults.length; i++) {
-			System.out.println(searchResults[i]);
+			System.out.println(userUI.viewSpecificSchool(searchResults[i][0]));
 		}
 		// tests the view specific search results
 		System.out.println("\nViewing specific details for ST JOHNS UNIVERSITY:");
 		System.out.println(userUI.viewSpecificSchool("ST JOHNS UNIVERSITY"));
 		System.out.println("\nSearching for recommended schools related to WASHINGTON AND LEE college:");
-		String[][] recommendedSchools = userUI.recommendSchool(schoolHome.findByName("WASHINGTON AND LEE"));
-		for (int i = 0; i < recommendedSchools.length; i++) {
-			System.out.println(schoolHome.findByName(recommendedSchools[i][0]));
-		}
+		//String[][] recommendedSchools = userUI.recommendSchool(schoolHome.findByName("WASHINGTON AND LEE"));
+		//for (int i = 0; i < recommendedSchools.length; i++) {
+			//System.out.println(schoolHome.findByName(recommendedSchools[i][0]));
+		//}
 		// testing the save school function
 		System.out.println("\nTesting if save school works with invalid and valid cases");
 		userUI.saveSchool("RAHAL UNIVERSITY");

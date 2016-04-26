@@ -85,8 +85,8 @@ public class AdminUI {
 	 * @param char
 	 *            representing the type of member
 	 */
-	public void addMember(String f, String l, String u, String p, char t, char s) {
-		adminHome.addNewMember(u, f, l, p, t);
+	public int addMember(String f, String l, String u, String p, char t, char s) {
+		return adminHome.addNewMember(u, f, l, p, t);
 	}
 
 	/**
@@ -145,7 +145,17 @@ public class AdminUI {
 	public AdminHome getAdminHome() {
 		return adminHome;
 	}
-
+	
+	/**
+	 * getUsers fetches all of the users stored in the database and provides
+	 * them to the user
+	 * 
+	 * @return all of the users in the library
+	 */
+	public String[][] getUsers() {
+		return adminHome.getUsers();
+	}
+ 
 	/**
 	 * view the member information of admin
 	 * 
@@ -153,6 +163,17 @@ public class AdminUI {
 	 */
 	public String viewMemberInfo() {
 		return getLog().getMember().toString();
+	}
+	
+	/**
+	 * Runs the findByName method on db
+	 * 
+	 * @param the
+	 *            username of the user you are searching for
+	 * @return the user you searched for
+	 */
+	public Member findByName(String u) {
+		return adminHome.findByName(u);
 	}
 
 }

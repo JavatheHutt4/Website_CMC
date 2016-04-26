@@ -225,7 +225,7 @@ public class DatabaseController {
 		}
 		for (int i = 0; i < usersFromLibrary.length; i++) {
 			if (usersFromLibrary[i][2].equals(username))
-				return -1;
+				return -2;
 			else
 				continue;
 		}
@@ -269,7 +269,6 @@ public class DatabaseController {
 	public String[][] getUsers() {
 		usersFromLibrary = databaseLibrary.user_getUsers();
 		return usersFromLibrary;
-
 	}
 
 	/**
@@ -368,17 +367,23 @@ public class DatabaseController {
 		return databaseLibrary.university_addUniversityEmphasis(school, emphasis);
 	}
 
-	// public int deleteUniversityEmphasis(String school, String emphasis){
-	// schoolsWithEmphasis = databaseLibrary.university_getNamesWithEmphases();
-	// for(int i = 0; i < schoolsWithEmphasis.length; i++){
-	// if(schoolsWithEmphasis[i][0].equals(school) &&
-	// schoolsWithEmphasis[i][1].equals(emphasis)){
-	// return -1;
-	// }
-	// }
-	// return databaseLibrary.university_addUniversityEmphasis(school,
-	// emphasis);
-	// }
+	/**
+	 * Delete an emphasis from the school
+	 * @param school
+	 * @param emphasis
+	 * @return
+	 */
+	public int deleteUniversityEmphasis(String school, String emphasis){
+		 schoolsWithEmphasis = databaseLibrary.university_getNamesWithEmphases();
+		 for(int i = 0; i < schoolsWithEmphasis.length; i++){
+		 if(schoolsWithEmphasis[i][0].equals(school) &&
+		 schoolsWithEmphasis[i][1].equals(emphasis)){
+		 return -1;
+		 }
+		 }
+		 return databaseLibrary.university_addUniversityEmphasis(school,
+		 emphasis);
+		 }
 
 	/**
 	 * getUsernamesWithSavedSchools fetches a 2d array of the users with their

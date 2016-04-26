@@ -1,4 +1,4 @@
-<%@include file="Verify.jsp"%>
+<%@include file="VerifyUser.jsp"%>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1"
@@ -28,6 +28,16 @@ style="width: 64px; height: 64px; font-family: Draft Beer;"
 alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">USER
 INTERFACE <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
+<p style ="text-align: center;">
+<% String errorParam = request.getParameter("Error");
+if (errorParam != null){
+	int error = Integer.parseInt(errorParam);
+	if (error == -1){
+		out.println("YOU CANNOT ACCESS THAT PAGE WITH CURRENT PERMISSIONS.<br>");
+	}
+}
+%>
+</p>
 <div id="panel">
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">

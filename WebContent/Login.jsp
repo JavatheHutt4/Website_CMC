@@ -54,6 +54,12 @@ if (errorParam != null){
 	else if (error == -2){
 		out.println("YOU CANNOT ACCESS THAT PAGE WITHOUT PROPER PERMISSIONS.<br>");
 	}
+	else if (error == -3){
+		out.println("Your account has been deactivated. Please contact an admin.");
+	}
+	else if (error == -4){
+		out.println("Logon Unsuccessful. Please check your username and password!");
+	}
 }
 %>
 </p>

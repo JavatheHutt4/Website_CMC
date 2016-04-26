@@ -58,7 +58,7 @@ public class SchoolHome {
 	 */
 	public String[] getSchoolEmphases(String school) {
 		String[][] all = db.getSchoolsWithEmphases();
-		String[] emphases = new String[5];
+		String[] emphases = new String[20];
 		int j = 0;
 		for (int i = 0; i < all.length; i++) {
 			if (all[i][0].equals(school)) {

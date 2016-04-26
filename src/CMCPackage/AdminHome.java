@@ -19,10 +19,16 @@ public class AdminHome {
 	public DatabaseController db;
 
 	/**
+	 * SchoolHome object
+	 */
+	public SchoolHome sh;
+	
+	/**
 	 * Constructor for AdminHome object which instantiates database
 	 */
 	public AdminHome() {
 		db = new DatabaseController();
+		sh = new SchoolHome();
 	}
 
 	/**
@@ -46,11 +52,8 @@ public class AdminHome {
 	 * @param password
 	 * @param type
 	 */
-	public void addNewMember(String u, String f, String l, String p, char t) {
-		if (t != 'a' && t != 'u') {
-			System.out.print("Invalid new member information");
-		}
-		db.addNewMember(f, l, u, p, t);
+	public int addNewMember(String u, String f, String l, String p, char t) {
+		return db.addNewMember(f, l, u, p, t);
 	}
 
 	/**
@@ -92,13 +95,33 @@ public class AdminHome {
 	 * @param QOLScale
 	 * @param emphasis
 	 */
-	public void addUniversity(String name, String state, String location, String control, int numStudents,
-			int perFemale, int satVerbal, int satMath, int expenses, int perFinancial, int numApplicants,
-			int perAdmitted, int perEnrolled, int acadScale, int socialScale, int QOLScale) {
+	public void addUniversity(String name, String state, String location, String control, int numStudents, double perFemale, double satVerbal, double satMath, 
+			double expenses, double perFinancial, int numApplicants, double perAdmitted, double perEnrolled, int acadScale, int socialScale, int QOLScale) {
 		db.addSchool(name, state, location, control, numStudents, perFemale, satVerbal, satMath, expenses, perFinancial,
 				numApplicants, perAdmitted, perEnrolled, acadScale, socialScale, QOLScale);
 	}
 
+	/**
+	 * Adds the emphasis to the school
+	 * @param name
+	 * @param emphasis
+	 */
+	public void addUniversityEmphasis(String school, String emphasis){
+		db.addUniversityEmphasis(school, emphasis);
+	}
+	
+	/**
+	 * Delete all emphases for a school
+	 * @param school
+	 */
+	public void deleteUniversityEmphases(String school){
+		School s = sh.findByName(school);
+		String[] emphases = s.getEmphasis();
+		for(int i=0;i<emphases.length;i++){
+			db.deleteUniversityEmphasis(school, emphases[i]);
+		}
+	}
+	
 	/**
 	 * edits university in database using DatabaseController object * @param
 	 * name
@@ -120,9 +143,8 @@ public class AdminHome {
 	 * @param QOLScale
 	 * @param emphasis
 	 */
-	public void editUniversity(String name, String state, String location, String control, int numStudents,
-			int perFemale, int satVerbal, int satMath, int expenses, int perFinancial, int numApplicants,
-			int perAdmitted, int perEnrolled, int acadScale, int socialScale, int QOLScale) {
+	public void editUniversity(String name, String state, String location, String control, int numStudents, double perFemale, double satVerbal, double satMath, 
+			double expenses, double perFinancial, int numApplicants, double perAdmitted, double perEnrolled, int acadScale, int socialScale, int QOLScale) {
 		db.editSchool(name, state, location, control, numStudents, perFemale, satVerbal, satMath, expenses,
 				perFinancial, numApplicants, perAdmitted, perEnrolled, acadScale, socialScale, QOLScale);
 	}
@@ -141,6 +163,16 @@ public class AdminHome {
 	 */
 	public Admin getMember() {
 		return admin;
+	}
+	
+	/**
+	 * getUsers fetches all of the users stored in the database and provides
+	 * them to the user
+	 * 
+	 * @return all of the users in the library
+	 */
+	public String[][] getUsers() {
+		return db.getUsers();
 	}
 
 	/**

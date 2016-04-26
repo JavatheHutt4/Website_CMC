@@ -32,6 +32,15 @@ public class UserHome {
 		db = new DatabaseController();
 		sc = new SearchController();
 	}
+	
+	/**
+	 * Constructor for UserHome object which instantiates user
+	 */
+	public UserHome(User u) {
+		db = new DatabaseController();
+		sc = new SearchController();
+		user = u;
+	}
 
 	/**
 	 * Uses the db to get all of the users and there information returned in a
@@ -71,13 +80,9 @@ public class UserHome {
 	 * @param String
 	 *            school name to be saved
 	 */
-	public void removeSavedSchool(String s) {
-		int i = db.removeSchool(user.getUserName(), s);
-		if (i != -1) {
-			System.out.println("School was successfully removed");
-		} else {
-			System.out.println("School is not in saved school list");
-		}
+	public int removeSavedSchool(String s) {
+		System.out.println("Test1");
+		return db.removeSchool(user.getUserName(), s);
 	}
 
 	/**

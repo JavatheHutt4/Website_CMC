@@ -158,8 +158,7 @@ public class SearchController {
 			int lowSocialScale, int highSocialScale, int lowQOLScale, int highQOLScale, String emph1, String emph2,
 			String emph3, String emph4, String emph5) {
 		schoolsInLibrary = db.getSchools();
-		String[][] invalidSearchString = new String[1][1];
-		invalidSearchString[0][0] = "Invalid Search Parameters";
+		String[][] invalidSearchString = null;
 		if ((lowNumStudents > highNumStudents) && (highNumStudents != -1))
 			return invalidSearchString;
 		if ((lowPerFemale > highPerFemale) && (highPerFemale != -1))
@@ -317,11 +316,7 @@ public class SearchController {
 																									.equals(emph4)
 																							|| listofSchoolsWithEmphasis[m][1]
 																									.equals(emph5)
-																							|| ((emph1 == null)
-																									&& (emph2 == null)
-																									&& (emph3 == null)
-																									&& (emph4 == null)
-																									&& (emph5 == null))) {
+																							|| ((emph1.equals("")) && (emph2.equals("")) && (emph3.equals("")) && (emph4.equals("")) && (emph5.equals("")))){
 																						emphasisFound = true;
 																						break;
 																					}
