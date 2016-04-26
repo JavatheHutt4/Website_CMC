@@ -9,13 +9,14 @@ String password = request.getParameter("password");
 char type = request.getParameter("type").charAt(0);
 char status = request.getParameter("status").charAt(0);
 
-if (type != 'a' || type != 'u'){
-	response.sendRedirect("EditUser.jsp?Error=-1");
+if (type != 'a' && type != 'u'){
+	response.sendRedirect("EditUser.jsp?User="+username+"&Error=-1");
 }
-else if (status != 'Y' || status != 'N'){
-	response.sendRedirect("EditUser.jsp?Error=-2");
+else if (status != 'Y' && status != 'N'){
+	response.sendRedirect("EditUser.jsp?User="+username+"&Error=-2");
 }
-aui.editMember(first,last,username,password,type, status);
-
-response.sendRedirect("ManageUsers.jsp?msg=1");
+else{
+	aui.editMember(first,last,username,password,type, status);
+	response.sendRedirect("ManageUsers.jsp?msg=1");
+}
 %>
