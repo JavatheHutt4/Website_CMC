@@ -14,7 +14,7 @@ margin-right: 80px;
 margin-left: 80px;
 background-color: silver;
 color: #0e0d0d;
-font-size: xx-large;
+font-size: xx-large; 
 }
 #panel2 {
 border-radius: 10px;
