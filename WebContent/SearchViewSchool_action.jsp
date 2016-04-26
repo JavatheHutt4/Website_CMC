@@ -34,14 +34,10 @@ alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">VIEW SEARCHED S
 String schoolName = request.getParameter("SchoolName");
 
 SchoolHome sh = new SchoolHome();
-SearchController sc = new SearchController();
+UserUI ui = new UserUI();
 School school = sh.findByName(schoolName);
-String[][] recommendedSchools = sc.getRecommendedSchools(school);
-try {
-    wait(65000);
-} catch (InterruptedException e) {
-    //Handle exception
-}
+String[][] recommendedSchools = ui.recommendSchool(sh.findByName(schoolName));
+
 %>
 Information for <%=schoolName%>
 <table style="text-align: center; width: 100%;" border="1" >

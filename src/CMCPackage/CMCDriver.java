@@ -42,10 +42,10 @@ public class CMCDriver {
 		System.out.println("\nViewing specific details for ST JOHNS UNIVERSITY:");
 		System.out.println(userUI.viewSpecificSchool("ST JOHNS UNIVERSITY"));
 		System.out.println("\nSearching for recommended schools related to WASHINGTON AND LEE college:");
-		//String[][] recommendedSchools = userUI.recommendSchool(schoolHome.findByName("WASHINGTON AND LEE"));
-		//for (int i = 0; i < recommendedSchools.length; i++) {
-			//System.out.println(schoolHome.findByName(recommendedSchools[i][0]));
-		//}
+		String[][] recommendedSchools = userUI.recommendSchool(schoolHome.findByName("WASHINGTON AND LEE"));
+		for (int i = 0; i < recommendedSchools.length; i++) {
+			System.out.println(schoolHome.findByName(recommendedSchools[i][0]));
+		}
 		// testing the save school function
 		System.out.println("\nTesting if save school works with invalid and valid cases");
 		userUI.saveSchool("RAHAL UNIVERSITY");

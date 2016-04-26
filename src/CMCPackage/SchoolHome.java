@@ -39,9 +39,9 @@ public class SchoolHome {
 		for (int i = 0; i < all.length; i++) {
 			if (all[i][0].equals(school)) {
 				School s = new School(all[i][0], all[i][1], all[i][2], all[i][3], Integer.parseInt(all[i][4]),
-						Integer.parseInt(all[i][5]), Integer.parseInt(all[i][6]), Integer.parseInt(all[i][7]),
-						Integer.parseInt(all[i][8]), Integer.parseInt(all[i][9]), Integer.parseInt(all[i][10]),
-						Integer.parseInt(all[i][11]), Integer.parseInt(all[i][12]), Integer.parseInt(all[i][13]),
+						Double.parseDouble(all[i][5]), Double.parseDouble(all[i][6]), Double.parseDouble(all[i][7]),
+						Double.parseDouble(all[i][8]), Double.parseDouble(all[i][9]), Integer.parseInt(all[i][10]),
+						Double.parseDouble(all[i][11]), Double.parseDouble(all[i][12]), Integer.parseInt(all[i][13]),
 						Integer.parseInt(all[i][14]), Integer.parseInt(all[i][15]), emphasis);
 				return s;
 			}
