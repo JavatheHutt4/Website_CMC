@@ -60,19 +60,19 @@ School Information
 </tr>
 <tr>
 <td>SCHOOL:</td>
-<td><input name="school" value = <%=school.getName() %> readonly></td>
+<td><input name="school" value = "<%=school.getName() %>" readonly></td>
 </tr>
 <tr>
 <td>STATE:</td>
-<td><input name="state" value = <% out.println(school.getState()); %> readonly></td>
+<td><input name="state" value = "<% out.println(school.getState()); %>" readonly></td>
 </tr>
 <tr>
 <td>LOCATION:</td>
-<td><input name="location" value = <% out.println(school.getLocation()); %> readonly></td>
+<td><input name="location" value = "<% out.println(school.getLocation()); %>" readonly></td>
 </tr>
 <tr>
 <td>CONTROL:</td>
-<td><input name="control" value = <% out.println(school.getControl()); %> readonly></td>
+<td><input name="control" value = "<% out.println(school.getControl()); %>" readonly></td>
 </tr>
 <tr>
 <td>NUMBER OF STUDENTS:</td>

@@ -24,9 +24,11 @@ color: #0e0d0d;
 </head>
 <body>
 <form method="post" action="Logout_action.jsp" name="logout">
-<p id="panel" style="text-align: center;"><img
+<p id="panel" style="text-align: center;"><a href="UserMenu.jsp">
+<img 
 style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">VIEW SEARCHED SCHOOL <input name="logout" value="Logout" type="submit"></font> </p>
+alt="CMCLogo" src="img/CMCLogo.png" align="left">
+</a><font size="+3">VIEW SEARCHED SCHOOL <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <div id="panel">
 <% 
@@ -44,19 +46,19 @@ String[][] recommendedSchools = ui.recommendSchool(sh.findByName(schoolName));
 <tbody>
 <tr>
 <td>SCHOOL:</td>
-<td><input name="school" value = <% out.println(school.getName()); %> readonly></td>
+<td><input name="school" value = "<% out.println(school.getName()); %>" readonly></td>
 </tr>
 <tr>
 <td>STATE:</td>
-<td><input name="state" value = <% out.println(school.getState()); %> readonly></td>
+<td><input name="state" value = "<% out.println(school.getState()); %>" readonly></td>
 </tr>
 <tr>
 <td>LOCATION:</td>
-<td><input name="location" value = <% out.println(school.getLocation()); %> readonly></td>
+<td><input name="location" value = "<% out.println(school.getLocation()); %>" readonly></td>
 </tr>
 <tr>
 <td>CONTROL:</td>
-<td><input name="control" value = <% out.println(school.getControl()); %> readonly></td>
+<td><input name="control" value = "<% out.println(school.getControl()); %>" readonly></td>
 </tr>
 <tr>
 <td>NUMBER OF STUDENTS:</td>
@@ -141,19 +143,19 @@ MAY WE ALSO RECOMMEND:
 <tbody>
 <tr>
 <td>SCHOOL:</td>
-<td><input name="school" value = <% out.println(school2.getName()); %> readonly></td>
+<td><input name="school" value = "<% out.println(school2.getName()); %>" readonly></td>
 </tr>
 <tr>
 <td>STATE:</td>
-<td><input name="state" value = <% out.println(school2.getState()); %> readonly></td>
+<td><input name="state" value = "<% out.println(school2.getState()); %>" readonly></td>
 </tr>
 <tr>
 <td>LOCATION:</td>
-<td><input name="location" value = <% out.println(school2.getLocation()); %> readonly></td>
+<td><input name="location" value = "<% out.println(school2.getLocation()); %>" readonly></td>
 </tr>
 <tr>
 <td>CONTROL:</td>
-<td><input name="control" value = <% out.println(school2.getControl()); %> readonly></td>
+<td><input name="control" value = "<% out.println(school2.getControl()); %>" readonly></td>
 </tr>
 <tr>
 <td>NUMBER OF STUDENTS:</td>
