@@ -270,7 +270,7 @@ public class School {
 	 * 
 	 * @return the qOLScale
 	 */
-	public int getQOLScale() {
+	public int getQOLScale() { 
 		return QOLScale;
 	}
 

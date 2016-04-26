@@ -29,6 +29,8 @@ style="width: 64px; height: 64px; font-family: Draft Beer;"
 alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">SEARCH RESULTS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <div id="panel">
+<table style="text-align: center; width: 100%;" border="1" cellpadding="2"
+cellspacing="2" >
 <% 
 
 String schoolName = request.getParameter("SchoolName");
@@ -83,12 +85,10 @@ for(int i = 0; i < results.length; i++){
 
 for(int i = 0; i < results.length; i++){
 %>
-<table style="text-align: center; width: 100%;" border="1" cellpadding="2"
-cellspacing="2" >
 <tbody>
 <tr>
 <td>
-<form method="post" action="SearchViewSchool_action.jsp" name="SearchViewSchool">
+<form method="post" action="SearchViewSchool.jsp" name="SearchViewSchool">
     <input name="viewSchool"
 	value="View" type="submit">
     <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden">
