@@ -22,9 +22,11 @@ color: #fdfdfd;
 </head>
 <body>
 <form method="post" action="Logout_action.jsp" name="logout">
-<p id="panel" style="text-align: center;"><img
-style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">Manage
+<p id="panel" style="text-align: center;">
+<a href="UserMenu.jsp">
+<img style="width: 64px; height: 64px; font-family: Draft Beer; "alt="CMCLogo" src="img/CMCLogo.png" align="left">
+</a>
+<font size="+3">Manage
 My
 Profile <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
