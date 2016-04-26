@@ -43,78 +43,81 @@ String[][] recommendedSchools = ui.recommendSchool(sh.findByName(schoolName));
 <table style="text-align: center; width: 100%;" border="1" >
 <tbody>
 <tr>
-<td>SCHOOL NAME</td>
-<td><%=school.getName()%>
-</td>
+<td>SCHOOL:</td>
+<td><input name="school" value = <% out.println(school.getName()); %> readonly></td>
 </tr>
 <tr>
-<td>STATE</td>
-<td><%=school.getState()%></td>
+<td>STATE:</td>
+<td><input name="state" value = <% out.println(school.getState()); %> readonly></td>
 </tr>
 <tr>
-<td>LOCATION</td>
-<td><%=school.getLocation() %></td>
+<td>LOCATION:</td>
+<td><input name="location" value = <% out.println(school.getLocation()); %> readonly></td>
 </tr>
 <tr>
-<td>CONTROL</td>
-<td><%=school.getControl() %></td>
+<td>CONTROL:</td>
+<td><input name="control" value = <% out.println(school.getControl()); %> readonly></td>
 </tr>
 <tr>
-<td>NUMBER OF STUDENTS</td>
-<td><%=school.getNumStudents() %></td>
+<td>NUMBER OF STUDENTS:</td>
+<td><input name="students" value = <% out.println(school.getNumStudents()); %> readonly></td>
 </tr>
 <tr>
-<td>PERCENT FEMALE</td>
-<td><%=school.getPerFemale() %></td>
+<td>% FEMALE:</td>
+<td><input name="female" value = <% out.println(school.getPerFemale()); %> readonly></td>
 </tr>
 <tr>
-<td>SAT VERBAL</td>
-<td><%=school.getSatVerbal() %></td>
+<td>SAT VERBAL:</td>
+<td><input name="satverbal" value = <% out.println(school.getSatVerbal()); %> readonly></td>
 </tr>
 <tr>
-<td>SAT MATH</td>
-<td><%=school.getSatMath() %></td>
+<td>SAT MATH:</td>
+<td><input name="satmath" value = <% out.println(school.getSatMath()); %> readonly></td>
 </tr>
 <tr>
-<td>EXPENSES</td>
-<td><%=school.getExpenses() %></td>
+<td>EXPENSES:</td>
+<td><input name="expenses" value = <% out.println(school.getExpenses()); %> readonly></td>
 </tr>
 <tr>
-<td>PERCENT FINANCIAL AID</td>
-<td><%=school.getPerFinancial() %></td>
+<td>% FINANCIAL AID:</td>
+<td><input name="financial" value = <% out.println(school.getPerFinancial()); %> readonly></td>
 </tr>
 <tr>
-<td>NUMBER OF APPLICANTS</td>
-<td><%=school.getNumApplicants()%></td>
+<td>NUMBER OF APPLICANTS:</td>
+<td><input name="numApplicants" value =<% out.println(school.getNumApplicants()); %> readonly></td>
 </tr>
 <tr>
-<td>PERCENT ADMITTED</td>
-<td><%=school.getPerAdmitted() %></td>
+<td>% ADMITTED:</td>
+<td><input name="admitted" value = <% out.println(school.getPerAdmitted()); %>readonly></td>
 </tr>
 <tr>
-<td>PERCENT ENROLLED</td>
-<td><%=school.getPerEnrolled() %></td>
+<td>% ENROLLED:</td>
+<td><input name="enrolled" value = <% out.println(school.getPerEnrolled()); %> readonly></td>
 </tr>
 <tr>
-<td>ACADEMICS SCALE (1-5)</td>
-<td><%=school.getAcadScale() %></td>
+<td>ACADEMIC SCALE (1-5):</td>
+<td><input name="acad" value = <% out.println(school.getAcadScale()); %> readonly></td>
 </tr>
 <tr>
-<td>SOCIAL SCALE (1-5)</td>
-<td><%=school.getSocialScale() %></td>
+<td>SOCIAL SCALE (1-5):</td>
+<td><input name="social" value = <% out.println(school.getSocialScale()); %> readonly></td>
 </tr>
 <tr>
-<td>QUALITY OF LIFE SCALE (1-5)</td>
-<td><%=school.getQOLScale() %></td>
+<td>QUALITY OF LIFE SCALE (1-5):</td>
+<td><input name="qol" value = <% out.println(school.getQOLScale()); %> readonly></td>
 </tr>
 <tr>
-<td>EMPHASES</td>
+<td>EMPHASES: </td>
 <td>
-<%String[] emphases = school.getEmphasis();
-for(int i = 0; i < emphases.length; i++){
-	if(emphases[i]!=null)
-	out.println(emphases[i]+"<br>");
-} %>
+<%
+String[] emphases = school.getEmphasis();
+for (int i = 0; i < emphases.length; i++){
+	//System.out.println(emphases[i]);
+	if(emphases[i]==null)
+		break;
+	out.println("<input name=\"emphasis"+i+"\" value =\""+emphases[i]+"\" readonly><br>");
+}
+%>
 </td>
 </tr>
 <tr>
@@ -137,78 +140,80 @@ MAY WE ALSO RECOMMEND:
 <table style="text-align: center; width: 100%;" border="1" >
 <tbody>
 <tr>
-<td>SCHOOL NAME</td>
-<td><%=school2.getName()%>
-</td>
+<td>SCHOOL:</td>
+<td><input name="school" value = <% out.println(school2.getName()); %> readonly></td>
 </tr>
 <tr>
-<td>STATE</td>
-<td><%=school2.getState()%></td>
+<td>STATE:</td>
+<td><input name="state" value = <% out.println(school2.getState()); %> readonly></td>
 </tr>
 <tr>
-<td>LOCATION</td>
-<td><%=school2.getLocation()%></td>
+<td>LOCATION:</td>
+<td><input name="location" value = <% out.println(school2.getLocation()); %> readonly></td>
 </tr>
 <tr>
-<td>CONTROL</td>
-<td><%=school2.getControl()%></td>
+<td>CONTROL:</td>
+<td><input name="control" value = <% out.println(school2.getControl()); %> readonly></td>
 </tr>
 <tr>
-<td>NUMBER OF STUDENTS</td>
-<td><%=school2.getNumStudents()%></td>
+<td>NUMBER OF STUDENTS:</td>
+<td><input name="students" value = <% out.println(school2.getNumStudents()); %> readonly></td>
 </tr>
 <tr>
-<td>PERCENT FEMALE</td>
-<td><%=school2.getPerFemale()%></td>
+<td>% FEMALE:</td>
+<td><input name="female" value = <% out.println(school2.getPerFemale()); %> readonly></td>
 </tr>
 <tr>
-<td>SAT VERBAL</td>
-<td><%=school2.getSatVerbal() %></td>
+<td>SAT VERBAL:</td>
+<td><input name="satverbal" value = <% out.println(school2.getSatVerbal()); %> readonly></td>
 </tr>
 <tr>
-<td>SAT MATH</td>
-<td><%=school2.getSatMath() %></td>
+<td>SAT MATH:</td>
+<td><input name="satmath" value = <% out.println(school2.getSatMath()); %> readonly></td>
 </tr>
 <tr>
-<td>EXPENSES</td>
-<td><%=school2.getExpenses() %></td>
+<td>EXPENSES:</td>
+<td><input name="expenses" value = <% out.println(school2.getExpenses()); %> readonly></td>
 </tr>
 <tr>
-<td>PERCENT FINANCIAL AID</td>
-<td><%=school2.getPerFinancial() %></td>
+<td>% FINANCIAL AID:</td>
+<td><input name="financial" value = <% out.println(school2.getPerFinancial()); %> readonly></td>
 </tr>
 <tr>
-<td>NUMBER OF APPLICANTS</td>
-<td><%=school2.getNumApplicants()%></td>
+<td>NUMBER OF APPLICANTS:</td>
+<td><input name="numApplicants" value =<% out.println(school2.getNumApplicants()); %> readonly></td>
 </tr>
 <tr>
-<td>PERCENT ADMITTED</td>
-<td><%=school2.getPerAdmitted() %></td>
+<td>% ADMITTED:</td>
+<td><input name="admitted" value = <% out.println(school2.getPerAdmitted()); %>readonly></td>
 </tr>
 <tr>
-<td>PERCENT ENROLLED</td>
-<td><%=school2.getPerEnrolled() %></td>
+<td>% ENROLLED:</td>
+<td><input name="enrolled" value = <% out.println(school2.getPerEnrolled()); %> readonly></td>
 </tr>
 <tr>
-<td>ACADEMICS SCALE (1-5)</td>
-<td><%=school2.getAcadScale() %></td>
+<td>ACADEMIC SCALE (1-5):</td>
+<td><input name="acad" value = <% out.println(school2.getAcadScale()); %> readonly></td>
 </tr>
 <tr>
-<td>SOCIAL SCALE (1-5)</td>
-<td><%=school2.getSocialScale() %></td>
+<td>SOCIAL SCALE (1-5):</td>
+<td><input name="social" value = <% out.println(school2.getSocialScale()); %> readonly></td>
 </tr>
 <tr>
-<td>QUALITY OF LIFE SCALE (1-5)</td>
-<td><%=school2.getQOLScale() %></td>
+<td>QUALITY OF LIFE SCALE (1-5):</td>
+<td><input name="qol" value = <% out.println(school2.getQOLScale()); %> readonly></td>
 </tr>
 <tr>
-<td>EMPHASES</td>
+<td>EMPHASES: </td>
 <td>
-<%String[] emphases2 = school2.getEmphasis();
-for(int i = 0; i < emphases2.length; i++){
-	if(emphases2[i]!=null)
-	out.println(emphases2[i]+"<br>");
- } %>
+<%
+String[] emphases2 = school.getEmphasis();
+for (int i = 0; i < emphases2.length; i++){
+	if(emphases2[i]==null)
+		break;
+	out.println("<input name=\"emphasis"+i+"\" value =\""+emphases2[i]+"\" readonly><br>");
+}
+%>
 </td>
 </tr>
 <tr>

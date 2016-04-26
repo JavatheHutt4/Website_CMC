@@ -43,6 +43,7 @@ public class SchoolHome {
 						Double.parseDouble(all[i][8]), Double.parseDouble(all[i][9]), Integer.parseInt(all[i][10]),
 						Double.parseDouble(all[i][11]), Double.parseDouble(all[i][12]), Integer.parseInt(all[i][13]),
 						Integer.parseInt(all[i][14]), Integer.parseInt(all[i][15]), emphasis);
+				// not the problem with cutting off results at first space System.out.println(s.getName());
 				return s;
 			}
 		}
