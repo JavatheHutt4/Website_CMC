@@ -34,9 +34,11 @@ color: #fdfdfd;
 
 <body>
 <form method="post" action="Logout_action.jsp" name="logout">
-<p id="panel" style="text-align: center;"><img 
-style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">MANAGE SCHOOLS <input name="logout" value="Logout" type="submit"></font> </p>
+<p id="panel" style="text-align: center;">
+<a href="UserMenu.jsp">
+<img style="width: 64px; height: 64px; font-family: Draft Beer;"alt="CMCLogo" src="img/CMCLogo.png" align="left">
+</a>
+<font size="+3">MANAGE SCHOOLS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <p style ="text-align:center;">
 <% 
