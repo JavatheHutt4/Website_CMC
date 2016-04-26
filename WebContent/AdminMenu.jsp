@@ -45,11 +45,11 @@ if (errorParam != null){
 cellspacing="2">
 <tbody>
 <tr>
-<td style="vertical-align: top; text-align: center;">
+<td style="vertical-align: top; text-align: center;"><br>
 <form method="post" action="ManageUsers.jsp" name="ManageUsers"> <input
 name="manageusers" value="Manage Users" type="submit"></form>
 </td>
-<td style="vertical-align: top; text-align: center;">
+<td style="vertical-align: top; text-align: center;"><br>
 <form method="post" action="ManageUniversities.jsp"
 name="ManageUniversities"> <input name="manageuniversities"
 value="Manage Universities" type="submit"></form>

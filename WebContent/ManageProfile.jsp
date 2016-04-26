@@ -82,7 +82,7 @@ name="type" value="u" readonly></span><br>
 </table>
 <div style="text-align: center;">&nbsp; <input value="Submit Changes"
 name="submit" type="submit"> <input name="reset" value="Reset"
-type="reset"><br>
+type="reset">
 </div>
 </form>
 </div>
