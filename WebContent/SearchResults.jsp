@@ -24,9 +24,11 @@ color: #0e0d0d;
 </head>
 <body>
 <form method="post" action="Logout_action.jsp" name="logout">
-<p id="panel" style="text-align: center;"><img
-style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">SEARCH RESULTS <input name="logout" value="Logout" type="submit"></font> </p>
+<p id="panel" style="text-align: center;">
+<a href="UserMenu.jsp">
+<img style="width: 64px; height: 64px; font-family: Draft Beer;" alt="CMCLogo" src="img/CMCLogo.png" align="left">
+</a>
+<font size="+3">SEARCH RESULTS <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <div id="panel">
 <table style="text-align: center; width: 100%;" border="1" cellpadding="2"
@@ -91,18 +93,18 @@ for(int i = 0; i < results.length; i++){
 <form method="post" action="SearchViewSchool.jsp" name="SearchViewSchool">
     <input name="viewSchool"
 	value="View" type="submit">
-    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden">
+    <input name="SchoolName" value="<%=schools.get(i).getName() %>" type="hidden">
 	</form>
 </td>
 <td><%=schools.get(i).getName() %></td>
 <td>
-	<form method="post" action="SearchSave_action.jsp" name="SearchSave">
+	<form method="post" action="Save_action.jsp" name="SearchSave">
     <input name="saveSchool"
 	value="Save" type="submit">
-    <input name="SchoolName" value="<%schools.get(i).getName(); %>" type="hidden">
+    <input name="SchoolName" value="<%=schools.get(i).getName() %>" type="hidden">
     </form>
     
-</td>
+</td> 
 </tr>
 <% } %>
 </tbody>
