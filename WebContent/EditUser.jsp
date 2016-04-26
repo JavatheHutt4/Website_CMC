@@ -44,6 +44,14 @@ char status= member.getStatus();
 %>
 
 <body>
+<form  action="Logout_action.jsp" name="logout">
+<p id="panel" style="text-align: center;">
+<a href="AdminMenu.jsp">
+<img style="width: 64px; height: 64px; font-family: Draft Beer;"alt="CMCLogo" src="img/CMCLogo.png" align="left">
+</a>
+<font size="+3">Edit User <input name="logout" value="Logout" type="submit">
+</font> </p>
+</form>
 <p style ="text-align:center;">
 <%
 String error = request.getParameter("Error");
@@ -58,14 +66,6 @@ if (error != null){
 }
 %>
 </p>
-<form  action="Logout_action.jsp" name="logout">
-<p id="panel" style="text-align: center;">
-<a href="AdminMenu.jsp">
-<img style="width: 64px; height: 64px; font-family: Draft Beer;"alt="CMCLogo" src="img/CMCLogo.png" align="left">
-</a>
-<font size="+3">Edit User <input name="logout" value="Logout" type="submit">
-</font> </p>
-</form>
 <div id="panel2">
 <form method="post" action="EditUser_action.jsp" name="edituser">
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"

@@ -122,6 +122,11 @@ School Information
 <td>EMPHASES: </td>
 <td>
 <%
+String[] emphases = school.getEmphasis();
+for (int i = 0; i < 5; i++){
+	//System.out.println(emphases[i]);
+	out.println("<input name=\"emphasis"+i+"\" value =\""+emphases[i]+"\" readonly><br>");
+}
 %>
 </td>
 </tr>

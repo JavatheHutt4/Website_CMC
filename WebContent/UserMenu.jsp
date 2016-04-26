@@ -47,7 +47,7 @@ cellspacing="2">
 <form method="post" action="ManageProfile.jsp"
 name="ManageProfile"><input name="manageprofile" value="Manage Profile"
 type="submit"></form>
-</td>
+</td> 
 <td style="vertical-align: top; text-align: center;">
 <form method="post" action="ManageSchools.jsp"
 name="ManageSchools"> <input name="manageschools"
