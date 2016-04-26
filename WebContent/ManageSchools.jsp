@@ -47,6 +47,10 @@ if (msg!=null){
 	int msgNum = Integer.parseInt(msg);
 	if (msgNum == 1)
 		out.println("School has successfully been removed from your saved schools");
+	else if (msgNum == 2)
+		out.println("School successfully saved!");
+	else if (msgNum == 3)
+		out.println("School has been saved previously.");
 }
 %>
 </p>

@@ -1,4 +1,4 @@
-<%-- <%@include file="VerifyUser.jsp"%> --%>
+<%@include file="VerifyUser.jsp"%>
 <%@page language="java" import="CMCPackage.*,java.util.*"%>
 <html>
 <head>
@@ -113,7 +113,7 @@ String[][] recommendedSchools = ui.recommendSchool(sh.findByName(schoolName));
 <%String[] emphases = school.getEmphasis();
 for(int i = 0; i < emphases.length; i++){
 	if(emphases[i]!=null)
-	out.println(emphases[i]);
+	out.println(emphases[i]+"<br>");
 } %>
 </td>
 </tr>
@@ -207,7 +207,7 @@ MAY WE ALSO RECOMMEND:
 <%String[] emphases2 = school2.getEmphasis();
 for(int i = 0; i < emphases2.length; i++){
 	if(emphases2[i]!=null)
-	out.println(emphases2[i]);
+	out.println(emphases2[i]+"<br>");
  } %>
 </td>
 </tr>
