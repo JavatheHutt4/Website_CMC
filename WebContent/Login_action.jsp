@@ -3,7 +3,7 @@
     LogonController lc = new LogonController();
     int loginStatus = lc.logon(request.getParameter("user"), request.getParameter("password"));
     if (loginStatus<0){
-        response.sendRedirect("Login.jsp?Error="+loginStatus);
+        response.sendRedirect("Login.jsp?Error=-4");
     }
     else{
         session.setAttribute("lc", lc);

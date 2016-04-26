@@ -71,7 +71,6 @@ public class LogonController {
 			}
 		} 
 		else {
-			System.out.println("Logon Unsuccessful. Please check your username and password!");
 			return -2;
 		}
 	}
