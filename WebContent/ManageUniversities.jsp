@@ -29,8 +29,20 @@ color: #fdfdfd;
 <font size="+3">Manage
 Universities <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
-<br>
-<table style="text-align: left; background-color: white; width: 100%;" border="1" cellpadding="2"
+<p style ="text-align: center;">
+<% String errorParam = request.getParameter("Error");
+if (errorParam != null){
+	int error = Integer.parseInt(errorParam);
+	if (error == -1){
+		out.println("University Edited Successfully.<br>");
+	}
+	if (error == -2){
+		out.println("University Added Successfully.<br>");
+	}
+}
+%>
+</p>
+<table style="text-align: left; background-color: silver; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr align="center">

@@ -13,5 +13,5 @@
 	ah.addUniversityEmphasis(school, request.getParameter("emphasis3"));
 	ah.addUniversityEmphasis(school, request.getParameter("emphasis4"));
 	ah.addUniversityEmphasis(school, request.getParameter("emphasis5"));
-	response.sendRedirect("ManageUniversities.jsp");
+	response.sendRedirect("ManageUniversities.jsp?Error=-2");
 %>

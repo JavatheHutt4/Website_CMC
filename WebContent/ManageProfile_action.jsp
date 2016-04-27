@@ -7,5 +7,5 @@
 	String last = request.getParameter("lastName");
 	String password = request.getParameter("password");
 	uh.editUserInfo(first, last, password);
-	response.sendRedirect("UserMenu.jsp");
+	response.sendRedirect("UserMenu.jsp?Error=-2");
 %>
