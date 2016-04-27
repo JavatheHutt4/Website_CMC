@@ -42,7 +42,8 @@ border="1" cellpadding="2" cellspacing="2">
 <tr>
 <td style="vertical-align: top; height: 50px;"><span
 style="color: black;">First
-Name:</span><br>
+Name:</span>
+<br>
 </td>
 <td style="vertical-align: top; color: black; height: 50px;"><input
 name="firstName" value="<%=user.getFirstName()%>"><br>
