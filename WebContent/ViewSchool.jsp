@@ -36,9 +36,13 @@ color: #fdfdfd;
 
 <body>
 <form method="post" action="Logout_action.jsp" name="logout">
-<p id="panel" style="text-align: center;"><img 
+<p id="panel" style="text-align: center;">
+<a href="UserMenu.jsp">
+<img 
 style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">VIEW SCHOOL <input name="logout" value="Logout" type="submit"></font> </p>
+alt="CMCLogo" src="img/CMCLogo.png" align="left">
+</a>
+<font size="+3">VIEW SCHOOL <input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <%
 String name = request.getParameter("School");
@@ -56,19 +60,19 @@ School Information
 </tr>
 <tr>
 <td>SCHOOL:</td>
-<td><input name="school" value = <% out.println(school.getName()); %> readonly></td>
+<td><input name="school" value = "<%=school.getName() %>" readonly></td>
 </tr>
 <tr>
 <td>STATE:</td>
-<td><input name="state" value = <% out.println(school.getState()); %> readonly></td>
+<td><input name="state" value = "<% out.println(school.getState()); %>" readonly></td>
 </tr>
 <tr>
 <td>LOCATION:</td>
-<td><input name="location" value = <% out.println(school.getLocation()); %> readonly></td>
+<td><input name="location" value = "<% out.println(school.getLocation()); %>" readonly></td>
 </tr>
 <tr>
 <td>CONTROL:</td>
-<td><input name="control" value = <% out.println(school.getControl()); %> readonly></td>
+<td><input name="control" value = "<% out.println(school.getControl()); %>" readonly></td>
 </tr>
 <tr>
 <td>NUMBER OF STUDENTS:</td>
@@ -123,8 +127,10 @@ School Information
 <td>
 <%
 String[] emphases = school.getEmphasis();
-for (int i = 0; i < 5; i++){
+for (int i = 0; i < emphases.length; i++){
 	//System.out.println(emphases[i]);
+	if(emphases[i]==null)
+		break;
 	out.println("<input name=\"emphasis"+i+"\" value =\""+emphases[i]+"\" readonly><br>");
 }
 %>

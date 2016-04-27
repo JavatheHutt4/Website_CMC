@@ -46,17 +46,17 @@ if (errorParam != null){
 cellspacing="2">
 <tbody>
 <tr>
-<td style="vertical-align: top; text-align: center;">
+<td style="vertical-align: top; text-align: center;"><br>
 <form method="post" action="ManageProfile.jsp"
 name="ManageProfile"><input name="manageprofile" value="Manage Profile"
 type="submit"></form>
 </td> 
-<td style="vertical-align: top; text-align: center;">
+<td style="vertical-align: top; text-align: center;"><br>
 <form method="post" action="ManageSchools.jsp"
 name="ManageSchools"> <input name="manageschools"
 value="Manage Schools" type="submit"></form>
 </td>
-<td style="vertical-align: top; text-align: center;">
+<td style="vertical-align: top; text-align: center;"><br>
 <form method="post" action="SearchSchools.jsp"
 name="SearchSchools"> <input name="searchschools"
 value="Search Schools" type="submit"></form>
