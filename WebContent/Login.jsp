@@ -17,7 +17,7 @@ color: #0e0d0d;
 font-size: xx-large;
 }
 body {
-background-color: #020202;
+background-color: #020202; 
 color: #fdfdfd; 
 }
 
