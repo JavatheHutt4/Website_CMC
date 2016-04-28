@@ -17,6 +17,14 @@ background-color: silver;
 color: #0e0d0d;
 font-size: xx-large;
 }
+#panel2 {
+border-radius: 10px;
+padding: 10px;
+margin-right: 80px;
+margin-left: 80px;
+background-color: silver;
+color: #0e0d0d;
+}
 body {
 background-color: #020202;
 color: #fdfdfd;
@@ -38,7 +46,7 @@ color: #fdfdfd;
 %>
 <form style="height: 301px;" method="post"
 action="EditUniversity_action.jsp" name="EditUniversity">
-<table style="text-align: left; background-color: white; width: 600px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2"
+<table style="text-align: left; background-color: silver; width: 600px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr align="center">

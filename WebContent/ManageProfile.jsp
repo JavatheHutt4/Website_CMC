@@ -36,13 +36,14 @@ Profile <input name="logout" value="Logout" type="submit"></font> </p>
 <form style="height: 301px;" method="post"
 action="ManageProfile_action.jsp" name="ManageProfile">
 <table
-style="text-align: left; width: 450px; background-color: white; margin-left: auto; margin-right: auto; height: 250px;"
+style="text-align: left; width: 450px; background-color: silver; margin-left: auto; margin-right: auto; height: 250px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
 <td style="vertical-align: top; height: 50px;"><span
 style="color: black;">First
-Name:</span><br>
+Name:</span>
+<br>
 </td>
 <td style="vertical-align: top; color: black; height: 50px;"><input
 name="firstName" value="<%=user.getFirstName()%>"><br>

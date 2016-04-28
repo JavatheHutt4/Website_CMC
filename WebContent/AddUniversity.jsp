@@ -33,15 +33,14 @@ color: #fdfdfd;
 </head>
 <body>
 <form method="post" action="Logout_action.jsp" name="logout">
-<p id="panel" style="text-align: center;"><img
+<p id="panel" style="text-align: center;"><a href="AdminMenu.jsp"><img
 style="width: 64px; height: 64px; font-family: Draft Beer;"
-alt="CMCLogo" src="img/CMCLogo.png" align="left"><font size="+3">Add A New University<input name="logout" value="Logout" type="submit"></font> </p>
+alt="CMCLogo" src="img/CMCLogo.png" align="left"></a><font size="+3">Add A New University<input name="logout" value="Logout" type="submit"></font> </p>
 </form>
 <br>
-<div id="panel2">
 <form style="height: 301px;" method="post"
 action="AddUniversity_action.jsp" name="AddUniversity">
-<table style="text-align: left; background-color: white; width: 600px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2"
+<table style="text-align: left; background-color: silver; width: 600px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr align="center">
@@ -158,6 +157,5 @@ type="reset"><br>
 <br>
 </div>
 </form>
-</div>
 </body>
 </html>

@@ -35,6 +35,9 @@ if (errorParam != null){
 	if (error == -1){
 		out.println("YOU CANNOT ACCESS THAT PAGE WITH CURRENT PERMISSIONS.<br>");
 	}
+	if (error == -2){
+		out.println("Profile Changed Successfully.<br>");
+	}
 }
 %>
 </p>
