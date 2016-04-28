@@ -106,7 +106,7 @@ public class UserHome {
 	 * search finds the schools that match the given criteria from a user's
 	 * search // UserHome contacts SeachController to get the search
 	 * 
-	 * @param name
+	 * @param name 
 	 *            - sequence of characters user is searching for in a school's
 	 *            name
 	 * @param state
