@@ -122,9 +122,9 @@ name="SearchForSchools">
 </table>
 
 <input name="searchforschools"
-value="Search For Schools" type="submit"></form>
+value="Search For Schools" type="submit">
 <input name="resetsearchforschools"
-value="Reset Form" type="reset">
+value="Reset Form" type="reset"></form>
 
 </div>
 </body>

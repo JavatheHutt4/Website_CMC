@@ -18,7 +18,7 @@ font-size: xx-large;
 }
 body {
 background-color: #020202;
-color: #fdfdfd;
+color: #fdfdfd; 
 }
 
 </style>
