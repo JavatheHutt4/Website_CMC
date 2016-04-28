@@ -33,7 +33,7 @@ public class SearchController {
 	 * 2D array of the schools in the database with a distance value derived
 	 * from their similarity to the viewed school
 	 */
-	public String[][] schoolsWithDistance;
+	public String[][] schoolsWithDistance, noResults;
 	/**
 	 * 2D array of the schools with emphasis given
 	 */
@@ -158,31 +158,32 @@ public class SearchController {
 			int lowSocialScale, int highSocialScale, int lowQOLScale, int highQOLScale, String emph1, String emph2,
 			String emph3, String emph4, String emph5) {
 		schoolsInLibrary = db.getSchools();
-		String[][] invalidSearchString = null;
+		noResults = new String[1][1];
+		noResults[0][0] = "FAIL";
 		if ((lowNumStudents > highNumStudents) && (highNumStudents != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowPerFemale > highPerFemale) && (highPerFemale != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowSatVerbal > highSatVerbal) && (highSatVerbal != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowSatMath > highSatMath) && (highSatMath != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowExpenses > highExpenses) && (highExpenses != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowPerFinancial > highPerFinancial) && (highPerFinancial != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowNumApplicants > highNumApplicants) && (highNumApplicants != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowPerAdmitted > highPerAdmitted) && (highPerAdmitted != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowPerEnrolled > highPerEnrolled) && (highPerEnrolled != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowAcadScale > highAcadScale) && (highAcadScale != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowSocialScale > highSocialScale) && (highSocialScale != -1))
-			return invalidSearchString;
+			return noResults;
 		if ((lowQOLScale > highQOLScale) && (highQOLScale != -1))
-			return invalidSearchString;
+			return noResults;
 		count = 0;
 		for (int i = 0; i < schoolsInLibrary.length; i++) {
 			if (schoolsInLibrary[i][0].contains(name) || name.equals(""))
@@ -337,6 +338,10 @@ public class SearchController {
 																				count++;
 																			}
 																		}
+		}
+		if(count==0){
+
+			return noResults;
 		}
 		return matchingSchools;
 	}

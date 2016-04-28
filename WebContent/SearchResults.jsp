@@ -76,16 +76,18 @@ String[][] results = sc.search(schoolName,state,location,control,numberOfStudent
 		perFinancialLow,perFinancialHigh,numberOfAppsLow,numberOfAppsHigh,perAdmittedLow,perAdmittedHigh,
 		perEnrolledLow,perEnrolledHigh,acadScaleLow,acadScaleHigh,socialScaleLow,socialScaleHigh,qOLScaleLow,qOLScaleHigh,
 		emphasis1,emphasis2,emphasis3,emphasis4,emphasis5);
+String result = "FAIL"; 
 
-if(results==null)
+if(result.equals(results[0][0])) 
 	response.sendRedirect("SearchSchools.jsp?Error=1");
 
 ArrayList<School> schools = new ArrayList<School>();
 for(int i = 0; i < results.length; i++){
-	schools.add(sh.findByName(results[i][0]));
+	schools.add(sh.findByName(results[i][0])); 
 }
 
 for(int i = 0; i < results.length; i++){
+	if(!results[0][0].equals("FAIL")){
 %>
 <tbody>
 <tr>
@@ -106,7 +108,7 @@ for(int i = 0; i < results.length; i++){
     
 </td> 
 </tr>
-<% } %>
+<% }} %>
 </tbody>
 </table>
 
